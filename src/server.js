@@ -1,8 +1,8 @@
-require('dotenv').config();
+const { PORT } = require('./common/config');
 const app = require('./app');
 const connectToDB = require('./db/db.client');
 
 connectToDB(() => {
-    app.listen(process.env.PORT, () => console.log(`App is running on http://localhost:${process.env.PORT}`));
+    app.listen(PORT, () => console.log(`App is running on http://localhost:${PORT}`));
 });
 

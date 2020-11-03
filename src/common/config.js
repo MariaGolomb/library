@@ -1,5 +1,7 @@
-const PORT = 3000;
-const MONGO_CONNECTION_STRING = 'mongodb+srv://user-nodejs:hsU8U0OaamtQljmh@sandbox-c9cc3.mongodb.net/library?retryWrites=true&w=majority';
+require('dotenv').config();
+
+const PORT = process.env.PORT;
+const MONGO_CONNECTION_STRING = process.env.MONGO_CONNECTION_STRING;
 
 module.exports = {
     PORT,
